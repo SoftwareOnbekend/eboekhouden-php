@@ -5,7 +5,7 @@
 With this framework agnostic package you can easily integrate E-boekhouden.nl within any PHP project.  
 If you wish to use this package and want to support future development. Please consider to [sponsor](https://github.com/sponsors/petericebear).
 
-View the original [SOAP documentation](https://secure.e-boekhouden.nl/handleiding/Documentatie_soap.pdf target="blank" rel="noopener noreferrer").   
+View the original [SOAP documentation](https://secure.e-boekhouden.nl/handleiding/Documentatie_soap.pdf).   
 
 ## Installation
 
