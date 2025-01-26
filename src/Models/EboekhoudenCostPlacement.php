@@ -5,24 +5,24 @@ namespace IntVent\EBoekhouden\Models;
 use IntVent\EBoekhouden\Contracts\Arrayable;
 use IntVent\EBoekhouden\Traits\ProtectedFieldsToArrayTrait;
 
-class EboekhoudenCostPlacement implements Arrayable
+class EboekhoudenCostCenter implements Arrayable
 {
     use ProtectedFieldsToArrayTrait;
 
-    protected int $cost_placement_id = 0;
-    protected int $cost_placement_parent_id = 0;
+    protected int $cost_center_id = 0;
+    protected int $cost_center_parent_id = 0;
     protected string $description = '';
 
     /**
-     * EboekhoudenCostPlacement constructor.
+     * EboekhoudenCostCenter constructor.
      * @param array|null $item
      */
     public function __construct(array $item = null)
     {
         if (! empty($item)) {
             $this
-                ->setCostPlacementId($item['KostenplaatsId'])
-                ->setCostPlacementParentId($item['KostenplaatsParentId'])
+                ->setCostCenterId($item['KostenplaatsId'])
+                ->setCostCenterParentId($item['KostenplaatsParentId'])
                 ->setDescription($item['Omschrijving']);
         }
     }
@@ -30,18 +30,18 @@ class EboekhoudenCostPlacement implements Arrayable
     /**
      * @return int
      */
-    public function getCostPlacementId(): int
+    public function getCostCenterId(): int
     {
-        return $this->cost_placement_id;
+        return $this->cost_center_id;
     }
 
     /**
-     * @param int $cost_placement_id
-     * @return EboekhoudenCostPlacement
+     * @param int $cost_center_id
+     * @return EboekhoudenCostCenter
      */
-    public function setCostPlacementId(int $cost_placement_id): EboekhoudenCostPlacement
+    public function setCostCenterId(int $cost_center_id): EboekhoudenCostCenter
     {
-        $this->cost_placement_id = $cost_placement_id;
+        $this->cost_center_id = $cost_center_id;
 
         return $this;
     }
@@ -49,18 +49,18 @@ class EboekhoudenCostPlacement implements Arrayable
     /**
      * @return int
      */
-    public function getCostPlacementParentId(): int
+    public function getCostCenterParentId(): int
     {
-        return $this->cost_placement_parent_id;
+        return $this->cost_center_parent_id;
     }
 
     /**
-     * @param int $cost_placement_parent_id
-     * @return EboekhoudenCostPlacement
+     * @param int $cost_center_parent_id
+     * @return EboekhoudenCostCenter
      */
-    public function setCostPlacementParentId(int $cost_placement_parent_id): EboekhoudenCostPlacement
+    public function setCostCenterParentId(int $cost_center_parent_id): EboekhoudenCostCenter
     {
-        $this->cost_placement_parent_id = $cost_placement_parent_id;
+        $this->cost_center_parent_id = $cost_center_parent_id;
 
         return $this;
     }
@@ -75,9 +75,9 @@ class EboekhoudenCostPlacement implements Arrayable
 
     /**
      * @param string $description
-     * @return EboekhoudenCostPlacement
+     * @return EboekhoudenCostCenter
      */
-    public function setDescription(string $description): EboekhoudenCostPlacement
+    public function setDescription(string $description): EboekhoudenCostCenter
     {
         $this->description = $description;
 
