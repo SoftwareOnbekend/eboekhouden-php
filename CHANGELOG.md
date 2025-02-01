@@ -3,6 +3,7 @@
 All notable changes to `eboekhouden-php` will be documented in this file.
 
 ## 3.0.0 - 2025-01-26
+- This version is not backwards compatible with previous versions.
 - Alle Cost placement phrases renamed to Cost center
 
 ## 1.0.1 - 2020-12-30
